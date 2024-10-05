@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>QUOTES</title>
+</head>
+
+<body>
+    <div class="menu">
+        <form action="/" id="form" class="form" method="POST">
+            <label for="">Choose a category:</label>
+            <select name="type" class="form-select">
+                <option value="" data-display="Select">Random</option>
+                <option value="0">Advice Slip</option>
+                <option value="1">Stoic</option>
+                <option value="2">Kanye West</option>
+            </select>
+            <button type="submit" class="form-submit">Find a quote</button>
+        </form>
+    </div>
+
+    </div>
+    <div class="quote-container">
+        <i class="pin"></i>
+        <blockquote class="note yellow">
+            <%= textQuote %>
+                <cite class="author">
+                    <% if(locals.author) { %>
+                        <%= author %>
+                            <% } else { %>
+                                Anonym
+                                <% } %>
+                </cite>
+        </blockquote>
+    </div>
+</body>
+
+</html>
